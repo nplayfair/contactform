@@ -9,7 +9,8 @@ const PORT = process.env.PORT || 8000;
 
 // Transporter
 const transporter = nodemailer.createTransport({
-  service: 'SendinBlue',
+  host: emailConfig.smtp,
+  port: 587,
   auth: {
     user: emailConfig.user,
     pass: emailConfig.key,
